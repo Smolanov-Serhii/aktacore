@@ -1,0 +1,55 @@
+@import "else";
+@import "swiper-bundle";
+@import "fresco";
+//@import "selectric";
+//@import "jquery.mCustomScrollbar";
+@import "aos";
+// FONTS LOAD SECTION
+$fontsize: 18px; // Body Font Size
+$lineheight: 1.65; // Document Line Height
+$userfont: noah-oh5, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+@mixin font($fname, $fstyle, $fweight, $furl){
+  @font-face{
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+
+}
+
+// GENERAL DOCUMENT STYLES
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+.locked{
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.content-container{
+  max-width: 1600px;
+  padding-left: calc((100% - 1600px) / 2);
+  padding-right: calc((100% - 1600px) / 2);
+  margin: auto;
+  @media all and (max-width: 1940px){
+    padding-left: 170px;
+    padding-right: 170px;
+  }
+  @media all and (max-width: 1440px){
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @media all and (max-width: 1200px){
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media all and (max-width: 500px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
